@@ -1,0 +1,94 @@
+/* <> медиа запросы */
+@media (max-width: 1200px) {
+    .header>.container {
+        height: 80px;
+    }
+}
+@media (max-width: 768px) {
+    body.lock {
+        overflow: hidden;
+    }
+    .header:before {
+        background-color: #d9d9d9;
+    }
+    .header__burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        position: relative;
+        z-index: 3;
+
+        & span {
+            background-color: #263248;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            top: 9px;
+            transition: all 0.3s ease;
+        }
+
+        &:before,
+        &:after {
+            content: '';
+            background-color: #263248;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            left: 0;
+            transition: all 0.3s ease;
+        }
+
+        &:before {
+            top: 0;
+        }
+
+        &:after {
+            bottom: 0;
+        }
+
+        &.active span {
+            transform: scale(0);
+        }
+
+        &.active:before {
+            transform: rotate(45deg);
+            top: 9px;
+        }
+
+        &.active:after {
+            transform: rotate(-45deg);
+            bottom: 9px;
+        }
+    }
+
+    .header__menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.596);
+        padding: 120px 50px 10px 50px;
+        transition: all 0.3s ease;
+        overflow: auto;
+
+        &.active {
+            top: 0;
+        }
+    }
+
+    .header__list {
+        display: block;
+
+        & li {
+            margin-left: 20px;
+            padding: 5px;
+        }
+    }
+
+    .header__link {
+        font-size: 21px;
+    }
+}

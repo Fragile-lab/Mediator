@@ -1,0 +1,26 @@
+.footer {
+    margin-top: 60px;
+    color: #fff;
+    flex: 0 0 auto;
+    height: 80px;
+    width: 100%;
+    background-color: #263248;
+    padding: 0 60px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    &__container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__link {
+        color: #fff;
+        margin-left: 10px;
+        cursor: pointer;
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}
