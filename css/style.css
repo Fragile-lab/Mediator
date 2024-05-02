@@ -101,16 +101,18 @@ body {
 }
 
 .wrapper {
+  display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 100%;
   height: auto;
+  min-height: 100%;
   box-shadow: 0 0 10px #000;
   max-width: 1920px;
   margin: 0 auto;
 }
 
 .content {
+  flex: 1 1 auto;
   padding-top: 100px;
 }
 
@@ -180,7 +182,7 @@ body {
   text-transform: uppercase;
   font-size: 20px;
   font-weight: 600;
-  transition: letter-spacing 0.5s ease, color 0.5s ease;
+  transition: color 0.3s ease;
   cursor: pointer;
 }
 .header__link:hover {
@@ -190,16 +192,23 @@ body {
 .frame1 h1 {
   text-align: center;
   text-transform: uppercase;
-  font-size: 72px;
+  font-size: 32px;
   font-weight: 700;
 }
 
 .frame2 {
+  margin-top: 20px;
   text-align: center;
+}
+.frame2 p {
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .frame3 {
   text-align: center;
+  margin-top: 20px;
+  font-weight: 600;
 }
 
 .footer {
@@ -209,7 +218,6 @@ body {
   height: 80px;
   width: 100%;
   background-color: #263248;
-  padding: 0 60px;
   font-size: 14px;
   display: flex;
   justify-content: center;
@@ -220,13 +228,34 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.footer__list {
+  display: flex;
+  align-items: center;
+}
 .footer__link {
+  display: inline-block;
+  border-radius: 50%;
   color: #fff;
   margin-left: 10px;
   cursor: pointer;
 }
 .footer__link:first-child {
   margin-left: 0;
+}
+.footer__link svg {
+  display: inline-block;
+  pointer-events: none;
+}
+.footer__link svg path {
+  pointer-events: none;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.footer__link:hover svg {
+  fill: #fff;
+}
+.footer__link:hover svg .path_inside {
+  color: #263248;
 }
 
 /* <> медиа запросы */
@@ -236,6 +265,9 @@ body {
   }
 }
 @media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
   body.lock {
     overflow: hidden;
   }

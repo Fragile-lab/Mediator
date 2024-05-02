@@ -5,6 +5,11 @@
     }
 }
 @media (max-width: 768px) {
+    //global
+    .container {
+        padding: 0 20px;
+    }
+    //header
     body.lock {
         overflow: hidden;
     }
@@ -91,4 +96,7 @@
     .header__link {
         font-size: 21px;
     }
+    //main content
+
+    //footer
 }

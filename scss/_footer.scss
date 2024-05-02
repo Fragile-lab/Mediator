@@ -5,22 +5,52 @@
     height: 80px;
     width: 100%;
     background-color: #263248;
-    padding: 0 60px;
     font-size: 14px;
     display: flex;
     justify-content: center;
+
     &__container {
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
+
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+
     &__link {
+        display: inline-block;
+        border-radius: 50%;
         color: #fff;
         margin-left: 10px;
         cursor: pointer;
+
         &:first-child {
             margin-left: 0;
         }
+
+        & svg {
+            display: inline-block;
+            pointer-events: none;
+
+            & path {
+                pointer-events: none;
+                color: #fff;
+                transition: all 0.3s ease;
+            }
+        }
+
+        &:hover {
+            svg {
+                fill: #fff;
+                & .path_inside {
+                    color: #263248;
+                }
+            }
+        }
+
     }
 }
