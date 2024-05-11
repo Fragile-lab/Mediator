@@ -75,6 +75,12 @@ h1, h2, h3, h4, h5, h6 {
   cursor: default;
 }
 
+@font-face {
+  font-family: "Heuristica";
+  src: url("fonts/Heuristica-Regular_0.otf") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
 html,
 body {
   width: 100%;
@@ -189,53 +195,61 @@ body {
   color: #748cb9;
 }
 
-.frame1__logo {
-  display: flex;
-  justify-content: end;
-  width: 1200px;
-  margin: 0 auto;
-}
-.frame1__logo-text {
-  text-transform: uppercase;
-  font-size: 36px;
-  color: #fff;
-  font-family: Heuristica;
-  letter-spacing: 4px;
-}
-.frame1__logo-button {
-  background-color: #fff;
-  color: #263248;
-  display: inline-block;
-  margin-top: 60px;
-  font-size: 24px;
-  padding: 10px 15px;
-  border-radius: 10px;
-  text-transform: uppercase;
-  font-weight: 600;
-  cursor: pointer;
-  transition: box-shadow 0.2s ease-out;
-}
-.frame1__logo-button:hover {
-  box-shadow: 0 0 10px #fff;
-}
-.frame1__img {
-  width: 650px;
-  position: relative;
-  border-radius: 25px;
-}
-.frame1__img img {
+.frame1 {
+  display: block;
   width: 100%;
 }
-.frame1__containbox {
-  padding: 80px;
+.frame1__layout {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.frame1__title {
+  width: 50%;
+  height: 100%;
+}
+.frame1__title h1 {
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 700;
+  display: inline-block;
+  position: relative;
+}
+.frame1__underline {
+  display: block;
   position: absolute;
-  left: -550px;
+  left: 0;
+  bottom: -40px;
+  width: 100%;
+  height: 1px;
   background-color: #263248;
+}
+.frame1__info {
+  color: #263248;
+  font-size: 24px;
+  font-family: Heuristica;
+}
+.frame1__info span {
+  font-weight: 600;
+}
+.frame1__info-margin80 {
+  margin-top: 80px;
+}
+.frame1__info-margin20 {
+  margin-top: 20px;
+}
+.frame1__logo {
+  width: 750px;
   border-radius: 25px;
-  box-shadow: 0 0 15px #263248;
-  width: 700px;
-  height: 400px;
-  top: calc(50% - 175px);
+  overflow: hidden;
+  box-shadow: 0 0 10px #000;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.frame1__logo img {
+  width: 100%;
 }
 
 .footer {
